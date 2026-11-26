@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
 import Button from '../ui/Button';
 
 const Hero = () => {
@@ -33,11 +32,11 @@ const Hero = () => {
           </p>
           <div className="flex flex-col items-center gap-4 sm:gap-6 animate-slide-up">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 w-full">
-              <Button variant="primary" size="lg" rightIcon={<ArrowRight className="w-5 h-5" aria-hidden="true" />} fullWidth onClick={() => document.getElementById('strategies')?.scrollIntoView({ behavior: 'smooth' })}>
-                Explore Strategies
+              <Button variant="primary" size="lg" fullWidth onClick={() => { window.open('https://portal.redbricksrealty.net/login', '_blank', 'noopener noreferrer'); }}>
+                Get Started
               </Button>
-              <Button variant="ghost" size="lg" fullWidth className="text-surface border-2 border-surface/50 hover:bg-surface/10 hover:border-surface" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-                Contact Us
+              <Button variant="ghost" size="lg" fullWidth className="text-surface border-2 border-surface/50 hover:bg-surface/10 hover:border-surface" onClick={() => document.getElementById('strategies')?.scrollIntoView({ behavior: 'smooth' })}>
+                Explore Strategies
               </Button>
             </div>
           </div>
