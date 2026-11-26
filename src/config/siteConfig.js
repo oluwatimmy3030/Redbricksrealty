@@ -10,11 +10,9 @@ export const siteConfig = {
   navigation: {
     main: [
       { label: 'Home', href: '#hero' },
-      { label: 'About Us', href: '#about' },
       { label: 'Investment Strategies', href: '#strategies' },
       { label: 'Ownership Models', href: '#ownership' },
-      { label: 'How It Works', href: '#how-it-works' },
-      { label: 'Contact', href: '#contact' }
+      { label: 'How It Works', href: '#how-it-works' }
     ],
     ctaButtons: [
       { label: 'Sign Up', href: 'https://portal.redbricksrealty.net/signup', variant: 'ghost' },
