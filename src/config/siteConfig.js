@@ -15,8 +15,8 @@ export const siteConfig = {
       { label: 'How It Works', href: '#how-it-works' }
     ],
     ctaButtons: [
-      { label: 'Sign Up', href: 'https://portal.redbricksrealty.net/signup', variant: 'ghost' },
-      { label: 'Login', href: 'https://portal.redbricksrealty.net/login', variant: 'primary' }
+      { label: 'Get Started', href: 'https://portal.redbricksrealty.net/login', variant: 'ghost' },
+      { label: 'Explore Strategies', href: '#strategies', variant: 'primary', internal: true }
     ]
   },
 

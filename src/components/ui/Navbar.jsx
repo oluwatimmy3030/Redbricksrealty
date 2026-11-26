@@ -63,19 +63,33 @@ const Navbar = () => {
               </a>
             ))}
             <div className="flex items-center gap-3 ml-4">
-              {siteConfig.navigation.ctaButtons.map((btn, index) => (
-                <a
-                  key={index}
-                  href={btn.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <Button variant={btn.variant} size="sm">
-                    {btn.label}
-                  </Button>
-                </a>
-              ))}
+              {siteConfig.navigation.ctaButtons.map((btn, index) => {
+                if (btn.internal) {
+                  return (
+                    <Button
+                      key={index}
+                      variant={btn.variant}
+                      size="sm"
+                      onClick={() => scrollToSection(btn.href)}
+                    >
+                      {btn.label}
+                    </Button>
+                  );
+                }
+                return (
+                  <a
+                    key={index}
+                    href={btn.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <Button variant={btn.variant} size="sm">
+                      {btn.label}
+                    </Button>
+                  </a>
+                );
+              })}
             </div>
           </div>
 
@@ -114,19 +128,34 @@ const Navbar = () => {
                 </a>
               ))}
               <div className="pt-4 border-t border-border flex flex-col gap-3">
-                {siteConfig.navigation.ctaButtons.map((btn, index) => (
-                  <a
-                    key={index}
-                    href={btn.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    <Button variant={btn.variant} fullWidth size="sm">
-                      {btn.label}
-                    </Button>
-                  </a>
-                ))}
+                {siteConfig.navigation.ctaButtons.map((btn, index) => {
+                  if (btn.internal) {
+                    return (
+                      <Button
+                        key={index}
+                        variant={btn.variant}
+                        fullWidth
+                        size="sm"
+                        onClick={() => scrollToSection(btn.href)}
+                      >
+                        {btn.label}
+                      </Button>
+                    );
+                  }
+                  return (
+                    <a
+                      key={index}
+                      href={btn.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <Button variant={btn.variant} fullWidth size="sm">
+                        {btn.label}
+                      </Button>
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>
