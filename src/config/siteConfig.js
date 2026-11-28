@@ -15,8 +15,8 @@ export const siteConfig = {
       { label: 'How It Works', href: '#how-it-works' }
     ],
     ctaButtons: [
-      { label: 'Sign Up', href: 'https://portal.redbricksrealty.net/signup', variant: 'ghost' },
-      { label: 'Login', href: 'https://portal.redbricksrealty.net/login', variant: 'primary' }
+      { label: 'Sign Up', href: 'https://app.redbricksrealty.net/signup', variant: 'ghost' },
+      { label: 'Login', href: 'https://app.redbricksrealty.net/login', variant: 'primary' }
     ]
   },
 
@@ -36,8 +36,8 @@ export const siteConfig = {
   },
 
   portalUrls: {
-    signup: 'https://portal.redbricksrealty.net/signup',
-    login: 'https://portal.redbricksrealty.net/login'
+    signup: 'https://app.redbricksrealty.net/signup',
+    login: 'https://app.redbricksrealty.net/login'
   },
 
   seo: {
